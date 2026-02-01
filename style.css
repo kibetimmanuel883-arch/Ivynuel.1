@@ -1,0 +1,561 @@
+/* IVYNUEL — A Final Goodbye
+    Luxury Editorial Tribute Stylesheet
+*/
+
+:root {
+    /* Colors */
+    --bg-deep: #0D051A;
+    --bg-accent: #1B0E36;
+    --primary-uv: #3B1D83;
+    --lilac-vivid: #8C5FD1;
+    --lilac-light: #E4CCF0;
+    --text-white: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.1);
+
+    /* Fonts */
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Syne', sans-serif;
+
+    /* Spacing & Transitions */
+    --section-padding: 8rem;
+    --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+/* --- Header Layout Improvement --- */
+header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at top right, #1B0E36 0%, #0D051A 100%);
+    padding: 10% 0;
+}
+
+.editorial-title {
+    line-height: 0.85;
+    margin: 0;
+}
+
+/* 1. "UN ÚLTIMO" - Massive & Powerful */
+.ultra-bold {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(3rem, 10vw, 8rem);
+    display: block;
+    letter-spacing: -0.05em;
+    color: var(--text-white);
+}
+
+/* 2. "tributo" - Elegant, Small, and Floating */
+.elegant-script {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    text-transform: lowercase;
+    color: var(--lilac-vivid);
+    margin-left: -20px; /* Slight overlap for editorial feel */
+    position: relative;
+    top: -20px;
+}
+
+/* 3. "A NUESTRO AMOR" - Clean and Minimal */
+.modern-light {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: clamp(1rem, 3vw, 2rem);
+    letter-spacing: 0.5em;
+    display: block;
+    margin: 20px 0;
+    color: var(--lilac-light);
+}
+
+/* 4. "MI PEDACITO DE CIELO" - The "Hollow Glow" Effect */
+.hollow-glow {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 8vw, 6rem);
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(228, 204, 240, 0.6);
+    text-shadow: 0 0 15px rgba(140, 95, 209, 0.3);
+    display: block;
+    transition: var(--transition-smooth);
+}
+
+.hollow-glow:hover {
+    -webkit-text-stroke: 1px var(--lilac-light);
+    text-shadow: 0 0 30px rgba(140, 95, 209, 0.6);
+}
+
+/* Decoration: Adding a floating element */
+.editorial-title::before {
+    content: "IVYNUEL";
+    position: absolute;
+    writing-mode: vertical-rl;
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    letter-spacing: 1em;
+    opacity: 0.3;
+    left: -50px;
+    height: 100%;
+}
+
+/* =========================================
+   1. GLOBAL & CORE STYLES
+   ========================================= */
+
+body {
+    background-color: #0D051A; /* Base Deep Purple */
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(59, 29, 131, 0.4) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(140, 95, 209, 0.3) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(27, 14, 54, 1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(140, 95, 209, 0.2) 0px, transparent 50%);
+    background-attachment: fixed; /* Keeps the depth as you scroll */
+    position: relative;
+    overflow-x: hidden;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(100px, 50px) scale(1.2); }
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.letter-spacing {
+    letter-spacing: 0.2em;
+}
+
+/* --- LUXURY TYPOGRAPHY SYSTEM --- */
+
+:root {
+    --font-main: 'Cormorant Garamond', serif;
+    --font-accent: 'Syne', sans-serif;
+    --font-ui: 'Montserrat', sans-serif;
+}
+
+/* 1. THE HERO (AVANT-GARDE STYLE) */
+.editorial-title {
+    font-family: var(--font-accent);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 0.9;
+}
+
+.editorial-title .accent-text {
+    font-family: var(--font-main);
+    font-style: italic;
+    text-transform: none;
+    font-weight: 300;
+    letter-spacing: 0;
+}
+
+/* 2. THE LETTER (ROMANTIC & TRADITIONAL) */
+.letter-content {
+    font-family: var(--font-main);
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #f1f1f1;
+    font-weight: 300;
+}
+
+.letter-content p {
+    margin-bottom: 2rem;
+}
+
+.drop-cap {
+    font-family: var(--font-accent); /* Modern twist on the drop cap */
+    font-weight: 800;
+    color: var(--lilac-vivid);
+}
+
+/* 3. MEMORY HEADINGS (ELEGANT SERIF) */
+.uv-gradient-text {
+    font-family: var(--font-main);
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* 4. UI ELEMENTS & TIMESTAMPS (CLEAN & MINIMAL) */
+.small-caps, .letter-spacing, footer p {
+    font-family: var(--font-ui);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 0.7rem;
+    color: var(--lilac-light);
+}
+
+/* 5. HOLLOW TEXT (HIGH FASHION STYLE) */
+.hollow-text {
+    font-family: var(--font-accent);
+    -webkit-text-stroke: 1.5px var(--lilac-vivid);
+    font-weight: 800;
+}
+
+/* --- REFINED SECTION ADJUSTMENTS --- */
+
+/* Add a vertical line aesthetic for that editorial look */
+.letter-layout {
+    border-left: 1px solid rgba(255,255,255,0.1);
+    padding-left: 3rem;
+}
+
+@media (max-width: 768px) {
+    .letter-layout {
+        border-left: none;
+        padding-left: 0;
+    }
+}
+/* =========================================
+   3. LAYOUT & GLASS PANELS
+   ========================================= */
+
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    transition: var(--transition-smooth);
+    overflow: hidden;
+}
+
+.glass-panel:hover {
+    transform: translateY(-10px);
+    border-color: var(--lilac-vivid);
+}
+
+/* Hero Section Specifics */
+header {
+    background: radial-gradient(circle at 10% 20%, var(--bg-accent) 0%, var(--bg-deep) 80%);
+}
+
+.video-container {
+    padding: 1rem;
+    margin-bottom: -3rem;
+    z-index: 2;
+}
+
+.brand-display {
+    font-size: clamp(4rem, 15vw, 12rem);
+    font-weight: 800;
+    line-height: 0.8;
+    color: var(--bg-accent);
+    margin-top: -2rem;
+    pointer-events: none;
+    z-index: 1;
+}
+/* Soften the white box of the heart image */
+header .glass-panel img {
+    mix-blend-mode: lighten; 
+    filter: invert(0.1) sepia(0.2) hue-rotate(240deg) brightness(1.2);
+}
+
+/* =========================================
+   4. ANIMATIONS (Scroll-Triggered Ready)
+   ========================================= */
+
+.animate-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: var(--transition-smooth);
+}
+
+/* If you want them to appear immediately without JS, 
+   remove the opacity/translate or use a simple CSS animation */
+.animate-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fallback for users who don't want to use JS to trigger 'active' */
+@media (prefers-reduced-motion: no-preference) {
+    section, header {
+        animation: fade-in-up linear both;
+        animation-timeline: view();
+        animation-range: entry 20% cover 30%;
+    }
+}
+
+@keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   5. RESPONSIVENESS & UTILS
+   ========================================= */
+
+@media (max-width: 991px) {
+    :root {
+        --section-padding: 4rem;
+    }
+    
+    .editorial-title {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .letter-layout {
+        flex-direction: column-reverse;
+    }
+
+    .brand-display {
+        font-size: 6rem;
+        text-align: center !important;
+    }
+}
+
+footer {
+    border-top: 1px solid var(--glass-border);
+    color: var(--lilac-light);
+    opacity: 0.6;
+}
+
+/* Buttons (For any future additions) */
+.luxury-btn {
+    background: transparent;
+    border: 1px solid var(--lilac-vivid);
+    color: var(--text-white);
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.luxury-btn:hover {
+    background: var(--lilac-vivid);
+    color: white;
+    box-shadow: 0 0 20px rgba(140, 95, 209, 0.4);
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* This creates a very fine, transparent noise texture */
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.05; 
+    pointer-events: none;
+    z-index: 9999;
+}
+/* Apply this to your main headings */
+.editorial-title, .ultra-bold {
+    /* A soft, dark glow behind the white text makes it pop against light orbs */
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    position: relative;
+}
+
+/* Adjust your Hollow Text (since it's the hardest to read) */
+.hollow-glow {
+    /* Increase the thickness of the stroke slightly */
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.8);
+    /* Add a darker "inner" shadow to define the letters */
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.8));
+}
+
+/* Improve the Body/Letter Text contrast */
+.serif-text, .letter-content {
+    color: #ffffff; /* Ensure it's pure white */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    font-weight: 400; /* Bumping weight from 300 to 400 helps thin fonts be clearer */
+}
+.glow-orb {
+    z-index: -1 !important; /* Ensures they are ALWAYS behind everything */
+    opacity: 0.15; /* Lower opacity even further to keep text clear */
+    mix-blend-mode: plus-lighter; /* Better blending for dark themes */
+}
+
+/* Add a dark overlay to the background to ensure a "floor" of contrast */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 5, 26, 0.3); /* A 30% dark veil */
+    z-index: -1;
+    pointer-events: none;
+}
+.glass-panel {
+    background: rgba(20, 10, 40, 0.6); /* Darker, more opaque purple-tinted glass */
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+/* ===============================
+   Farewell Audio Section
+   Tone: restraint · presence · care
+================================ */
+
+.farewell-audio {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.audio-frame {
+  max-width: 420px;
+}
+.audio-frame iframe {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+/* Adds a glow behind memory images so they don't look muddy */
+.glass-panel img {
+    filter: brightness(1.1) contrast(1.05); /* Slightly punch up the image */
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.05); /* Lighter glass */
+    box-shadow: 0 0 50px rgba(140, 95, 209, 0.2); /* Soft purple halo */
+}
+/* Force memory text to be clear */
+.serif-text.animate-reveal {
+    color: #E4CCF0 !important; /* Use the light accent color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Stronger shadow for legibility */
+    line-height: 1.8;
+}
+
+/* Add a subtle highlight to the column containing text */
+.col-md-6 {
+    position: relative;
+    z-index: 5;
+}
+
+/* This creates a light "wash" behind text blocks */
+.row.align-items-center {
+    background: radial-gradient(circle at center, rgba(59, 29, 131, 0.15) 0%, transparent 70%);
+    padding: 2rem;
+    border-radius: 20px;
+}
+/* Container styling */
+.heading-section {
+    position: relative;
+    background: linear-gradient(to right, #f3e8ff, #e0d6ff); /* subtle lilac gradient */
+    overflow: hidden;
+}
+/* IVYNUEL — A Final Goodbye | Optimized */
+
+:root {
+    /* Colors */
+    --bg-deep: #0D051A;
+    --bg-accent: #1B0E36;
+    --primary-uv: #3B1D83;
+    --lilac-vivid: #8C5FD1;
+    --lilac-light: #E4CCF0;
+    --text-white: #ffffff;
+    --glass-bg: rgba(20, 10, 40, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.15);
+
+    /* Fonts */
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Syne', sans-serif;
+    --font-ui: 'Montserrat', sans-serif;
+
+    /* Transitions & spacing */
+    --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --section-padding: 8rem;
+}
+
+/* ========== BODY & GLOBAL STYLES ========== */
+body {
+    background-color: var(--bg-deep);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(59,29,131,0.4) 0%, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(140,95,209,0.3) 0%, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(27,14,54,1) 0%, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(140,95,209,0.2) 0%, transparent 50%);
+    background-attachment: fixed;
+    color: var(--text-white);
+    font-family: var(--font-serif);
+    overflow-x: hidden;
+}
+
+/* Floating Glow Orbs */
+.glow-orb {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+    opacity: 0.15;
+    pointer-events: none;
+    mix-blend-mode: plus-lighter;
+    animation: float 20s infinite alternate ease-in-out;
+}
+.orb-1 { top:-10%; left:-10%; background: var(--primary-uv); }
+.orb-2 { bottom:-10%; right:-10%; background: var(--lilac-vivid); animation-delay: -5s; }
+@keyframes float { 0% { transform: translate(0,0) scale(1);} 100% { transform: translate(100px,50px) scale(1.2);} }
+
+/* Glass Panels */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    transition: var(--transition);
+    overflow: hidden;
+}
+.glass-panel:hover { transform: translateY(-10px); border-color: var(--lilac-vivid); }
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at 10% 20%, var(--bg-accent) 0%, var(--bg-deep) 80%);
+    padding: 10% 0;
+}
+
+/* ========== TYPOGRAPHY ========== */
+.editorial-title { line-height: 0.85; position: relative; text-transform: uppercase; letter-spacing: -2px; }
+.ultra-bold { font-family: var(--font-sans); font-weight: 800; font-size: clamp(3rem,10vw,8rem); color: var(--text-white); display:block; }
+.elegant-script { font-family: var(--font-serif); font-style: italic; font-weight:300; font-size: clamp(1.5rem,5vw,4rem); color: var(--lilac-vivid); position: relative; top: -20px; margin-left: -20px; }
+.modern-light { font-family: var(--font-ui); font-weight: 300; font-size: clamp(1rem,3vw,2rem); letter-spacing:0.5em; display:block; margin:20px 0; color: var(--lilac-light); }
+.hollow-glow { font-family: var(--font-sans); font-weight:800; font-size: clamp(2rem,8vw,6rem); color: transparent; -webkit-text-stroke:1.5px rgba(255,255,255,0.8); filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.8)); transition: var(--transition); }
+.hollow-glow:hover { -webkit-text-stroke: 1.5px var(--lilac-light); text-shadow:0 0 30px rgba(140,95,209,0.6); }
+
+/* Letter Content */
+.letter-content { font-size: 1.4rem; line-height: 1.8; font-weight: 400; color: #fff; text-shadow: 2px 2px 6px rgba(0,0,0,0.6); padding: 2rem; border-radius: 12px; background-size: cover; background-position: center; }
+.drop-cap { font-family: var(--font-sans); font-weight: 800; color: var(--lilac-vivid); float: left; font-size:3rem; line-height:1; margin-right:0.5rem; }
+
+/* Memories Headings */
+.uv-gradient-text { font-family: var(--font-serif); font-size: 3rem; font-style: italic; font-weight: 600; color: var(--lilac-vivid); }
+
+/* Small caps / footers */
+.small-caps, .letter-spacing, footer p { font-family: var(--font-ui); font-weight:400; text-transform:uppercase; letter-spacing:0.4em; font-size:0.7rem; color: var(--lilac-light); }
+
+/* Animations */
+.animate-reveal { opacity:0; transform:translateY(40px); transition: var(--transition); }
+.animate-reveal.active { opacity:1; transform:translateY(0); }
+
+/* Media Queries */
+@media (max-width:991px){
+    :root { --section-padding:4rem; }
+    .editorial-title { font-size:3.5rem; margin-bottom:2rem; }
+    .letter-layout { flex-direction:column-reverse; }
+    .brand-display { font-size:6rem; text-align:center !important; }
+}
+
+
+
